@@ -1,0 +1,17 @@
+<br>
+<br>
+<br>
+<div class="container"></div>
+<button class="btn btn-primary"
+(click) = "onClickButton()">Display Details</button>
+<br>
+<p *ngIf="buttonClicked">Secret Password = Tuna</p>
+<div *ngFor="let click of buttonClicks; let i = index">
+    <p [ngStyle]="{'background-color':blue}" 
+    [ngClass]="{'fifth-item': true}" 
+    *ngIf="i >= 5; else firstFive">{{ click }}</p>
+    <ng-template #firstFive>
+            <p>{{ click }}</p>
+    </ng-template>
+</div>
+

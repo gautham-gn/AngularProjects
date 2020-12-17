@@ -1,0 +1,10 @@
+<label for="Username"></label>
+<input type="text"
+class="form-control"
+[(ngModel)]="userName">
+<br>
+<button class="btn btn-primary" 
+[disabled] = "!userNotEmpty()"
+(click)="onAddUser()"> Add User </button>
+<br>
+<p>{{ userStatus }}</p>
